@@ -22,7 +22,8 @@ public class SiteListApis {
     @Step
     public Response getLocationApi(String locationId) throws MalformedURLException {
         String get_locationApi = String.format(SiteListApisEndpoint.GET_LOCATIONAPI, locationId);
-        response = SerenityRest.given()
+        System.out.println("after param of location url" + get_locationApi );
+                response = SerenityRest.given()
                 .when()
                 .get(get_locationApi);
         return response;
